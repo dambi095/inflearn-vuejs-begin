@@ -1,0 +1,26 @@
+<!-- 
+    ! + Tab 클릭 시 html 기본 구조가 작성된다.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- div#app 작성 후 ennter 입력시 아래와 같은 태그 생성-->
+    <div id="app"></div>
+    <script>
+        const div = document.querySelector('#app');
+        // console.log(div);
+        let str = 'hello world';
+        div.innerHTML = str;
+
+        str = 'hello world!!!'; 
+        div.innerHTML = str;
+
+    </script>
+</body>
+</html>
