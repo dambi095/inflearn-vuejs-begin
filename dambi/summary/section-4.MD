@@ -20,7 +20,7 @@ let obj = {
         console.log(this.num); 
     }
 }
-obj.getNumber() // 10 !
+obj.getNumber() // 10
 ```
 
 ```
@@ -31,10 +31,11 @@ let Vue = {
     }
     methods: {
         getNumber: function() { 
-            this.num
+            this.num 
         }
     }
 }
+Vue.getNumber() // 10
 ```
 메서드 함수안에서 this 는 해당 data 안의 num 을 바라본다. Vue 내부의 동작에 의해 data 안에 선언한 num이 바깥 레벨로 빠져 나와진다. 때문에 this를 이용하여 접근이 가능하다. 
 
