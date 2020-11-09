@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <app-header :propsdata='num'></app-header>
+        <app-content @pass='deliverNum'></app-content>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // 같은 레벨의 컴포넌트에게 10을 전달해보자..!
+        const appHeader = {
+            template: '<div>header</div>',
+            props: ['propsdata']
+        }
+
+        const appContent = {
+            template: '<div>content<button @click=passNumber>pass</button></div>',
+            methods: {
+                passNumber: function () {
+                    console.log('@@')
+                    this.$emit('pass', 10);
+                }
+            }
+        }
+
+        new Vue({
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content': appContent
+            },
+            data: {
+                num: 0
+            },
+            methods: {
+                deliverNum: function(value) {
+                    console.log('SSS');
+                    
+                    this.num = value;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
