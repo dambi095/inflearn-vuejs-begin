@@ -7,3 +7,6 @@
  ```
 ![MVVM](https://github.com/namjunemy/TIL/blob/master/Vue/img/01.PNG?raw=true)
 - MVVM : 모델과 뷰 사이에 뷰모델이 위치하는 구조
+
+### 참고
+[IIFE](https://developer.mozilla.org/ko/docs/Glossary/IIFE) : 즉시실행함수 MDN
