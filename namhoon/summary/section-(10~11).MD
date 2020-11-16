@@ -26,7 +26,7 @@ app div에 webpack을 통해 주입됨
 HTML / JAVASCRIPT / CSS로 화면의 영역을 나눠 한파일에서 관리
 ```
 
-CLI의 .vue는 컴포넌트를 재사용 할 확률이 높으므로 data : 객체가 아닌
+CLI의 .vue는 컴포넌트간의 데이터가 값의 참조로인해 공유되지 않도록
  data : fuction(){
 	return{
 	}
