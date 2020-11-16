@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./common.css">
+<body>
+    <div id="app" class="container">
+        <div class="divSection">
+            <h1>{{ num }}</h1>
+        <a href="#" class="btn2" @click="addNum">increase</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num: 10
+            },
+            watch: {
+                num: function() {
+                    this.logText();
+                }
+            },
+            methods: {
+                addNum: function() {
+                    this.num = this.num + 1;
+                },
+                logText: function() {
+                    console.log('changed'); // num이 증가할 때마다 로그가 찍히게
+                }
+            }
+        })
+    </script>
+</body>
+</html>
