@@ -1,17 +1,17 @@
 import Vue from 'vue'
-// import App from './App.vue'
+import App from './App.vue'
 
 Vue.config.productionTip = false
 
-const App = {
-  template: '<div>'
-}
+// const App = {
+//   template: '<div id=app></div>'
+// }
 
 new Vue({
   render: h => h(App),
-  components: {
-    app: App
-  }
+  // components: {
+  //   app: App
+  // }
 }).$mount('#app')
 
 // new Vue({

@@ -1,33 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <!-- 
-      구 컴포넌트 명명법 
-      <hello-world></hello-world> 
-    -->
+  <!-- template root는 무조건 하나의 div 만을 가져야한다. -->
+  <div>
+    <app-header 
+      :propsdata='str'
+      @renew='renewStr'
+    ></app-header>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue';
 
 export default {
-  name: 'App',
+  data: function() {
+    return {
+      str: 'Header'
+    }
+  },
   components: {
-    HelloWorld,
-    // 'hello-world': HelloWorld
+    'app-header': AppHeader
+  }, 
+  methods: {
+    renewStr: function() {
+      this.str = 'hi';
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
